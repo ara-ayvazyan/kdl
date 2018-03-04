@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/KDL.suo
+Debug/
+Release/
+x64/
+*.vcxproj.user
+/KDL/KDL.APS
