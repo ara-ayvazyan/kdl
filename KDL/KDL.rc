@@ -27,8 +27,8 @@ LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,0,0,1
- PRODUCTVERSION 0,0,0,1
+ FILEVERSION 0,0,0,4
+ PRODUCTVERSION 0,0,0,4
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -44,12 +44,12 @@ BEGIN
         BLOCK "000004b0"
         BEGIN
             VALUE "FileDescription", "Keyboard Driver Light"
-            VALUE "FileVersion", "0, 0, 0, 3"
+            VALUE "FileVersion", "0.0.0.4"
             VALUE "InternalName", "KDL"
             VALUE "LegalCopyright", "Copyright © Ara Ayvazyan 2011-2018"
             VALUE "OriginalFilename", "KDL.exe"
             VALUE "ProductName", "KDL Application"
-            VALUE "ProductVersion", "0, 0, 0, 3"
+            VALUE "ProductVersion", "0.0.0.4"
         END
     END
     BLOCK "VarFileInfo"
@@ -118,7 +118,7 @@ CAPTION "About KDL"
 FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,190,7,50,14
-    LTEXT           "Keyboard Driver Light v.0.3.",IDC_STATIC,30,7,96,8
+    LTEXT           "Keyboard Driver Light v.0.4.",IDC_STATIC,30,7,96,8
     LTEXT           "Copyright © Ara Ayvazyan 2011-2018.",IDC_STATIC,30,16,147,8
     LTEXT           "The program is free for non-commercial use.",IDC_STATIC,30,25,147,8
 END

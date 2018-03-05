@@ -50,8 +50,8 @@ namespace KDL
 
     } // anonymous
 
-    Hook::Hook()
-        : _hook{ ::SetWindowsHookExW(WH_KEYBOARD_LL, OnKeyboardLL, nullptr, 0) }
+    Hook::Hook(HINSTANCE hInstance)
+        : _hook{ ::SetWindowsHookExW(WH_KEYBOARD_LL, OnKeyboardLL, hInstance, 0) }
     {}
 
     void Hook::SetKeyboard(const Keyboard* kbd)

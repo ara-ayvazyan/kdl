@@ -8,7 +8,7 @@ namespace KDL
     class Hook
     {
     public:
-        Hook();
+        explicit Hook(HINSTANCE hInstance);
         ~Hook();
 
         void SetKeyboard(const Keyboard* kbd);

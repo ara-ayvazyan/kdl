@@ -20,7 +20,8 @@ namespace KDL
           _icon{ _hWnd, MSG_MENU, nullptr, nullptr },
           _hotkeyId{ ::GlobalAddAtomW(c_wndClass) },
           _languageMenu{ hInstance, _hWnd, _langs },
-          _settingsMenu{ hInstance, _hWnd, _langs }
+          _settingsMenu{ hInstance, _hWnd, _langs },
+          _hook{ hInstance }
     {
         Update();
         ::RegisterHotKey(_hWnd, _hotkeyId, MOD_ALT | MOD_SHIFT, 0);

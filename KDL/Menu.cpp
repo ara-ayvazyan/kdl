@@ -123,33 +123,27 @@ namespace KDL
         const auto& lang = _langs[index];
 
         ::DrawIconEx(hDC, rc.left + 3, rc.top + 3, lang.GetIcon(), 16, 16, 0, nullptr, DI_NORMAL);
-
         rc.left += 25;
 
         ::SetBkMode(hDC, TRANSPARENT);
-
-        auto hOldObject = ::SelectObject(hDC, ::GetStockObject(DEFAULT_GUI_FONT));
         ::DrawTextW(hDC, lang.GetName().c_str(), -1, &rc, DT_SINGLELINE | DT_VCENTER);
-        ::SelectObject(hDC, hOldObject);
     }
 
     void Menu::OnMeasureItem(LPMEASUREITEMSTRUCT item)
     {
         if (item->CtlType = ODT_MENU)
         {
-            item->itemWidth = _width + 25;
+            item->itemWidth = _width;
             item->itemHeight = 20;
         }
     }
 
     void Menu::RecalcWidth(bool all)
     {
-        _width = 0;
-
         auto hdc = ::CreateCompatibleDC(nullptr);
-        auto hOldObject = ::SelectObject(hdc, ::GetStockObject(DEFAULT_GUI_FONT));
-
         SIZE size;
+
+        _width = 0;
 
         for (size_t i = 0; i < _langs.GetSize(); ++i)
         {
@@ -165,7 +159,6 @@ namespace KDL
                 _width = size.cx;
         }
 
-        ::SelectObject(hdc, hOldObject);
         ::DeleteDC(hdc);
     }
 
