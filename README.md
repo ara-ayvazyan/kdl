@@ -8,4 +8,7 @@ A simple and lightweight program for changing the keyboard language on Windows.
 
 # Download
 
+- [Version 0.4](https://github.com/ara-ayvazyan/kdl/releases/download/v0.4/KDL.msi)
+  Fixed issues on Windows XP.
 - [Version 0.3](https://github.com/ara-ayvazyan/kdl/releases/download/v0.3/KDL.msi)
+  Initial release.
